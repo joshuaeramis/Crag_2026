@@ -9,40 +9,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0047AB", // Deep Blue
-                        "accent-gold": "#FFB800",
-                        "accent-silver": "#94A3B8",
-                        "accent-bronze": "#B45309",
-                        "background-light": "#F8FAFC",
-                        "surface": "#FFFFFF",
+                        "primary": "#137fec",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
                     },
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
                 },
             },
         }
     </script>
 <style type="text/tailwindcss">
-        @layer utilities {
-            .no-scrollbar::-webkit-scrollbar { display: none; }
-            .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        }
-        body {
-            min-height: max(884px, 100dvh);
-            background-color: #F8FAFC;
-        }
+        body { font-family: 'Lexend', sans-serif; }
+        .venue-card:hover .venue-image { transform: scale(1.05); }
+        .venue-image { transition: transform 0.5s ease; }
     </style>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-
   </head>
 <body class="bg-background-light font-display text-slate-900">
 <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 ios-blur border-b border-slate-200 dark:border-slate-800">
@@ -151,7 +149,7 @@
 </div>
 </div>
 </div>
-<div class="px-4 py-2"> -->
+<div class="px-4 py-2"> 
 
 <button class="group relative w-full flex items-center justify-between overflow-hidden rounded-2xl h-24 px-6 bg-primary text-white shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
 
