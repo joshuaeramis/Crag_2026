@@ -9,32 +9,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f8fafc",
-                        "background-dark": "#0f172a",
+                        "primary": "#0047AB", // Deep Blue
+                        "accent-gold": "#FFB800",
+                        "accent-silver": "#94A3B8",
+                        "accent-bronze": "#B45309",
+                        "background-light": "#F8FAFC",
+                        "surface": "#FFFFFF",
                     },
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"]
                     },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "2xl": "1rem",
-                        "full": "9999px"
-                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
                 },
             },
         }
     </script>
 <style type="text/tailwindcss">
-        body { font-family: 'Lexend', sans-serif; }
-        .venue-card:hover .venue-image { transform: scale(1.05); }
-        .venue-image { transition: transform 0.5s ease; }
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar { display: none; }
+            .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        }
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #F8FAFC;
+        }
     </style>
 <style>
     body {
@@ -78,14 +79,14 @@
 url("/Images/Images/2.JPG");'>
 <div class="flex flex-col gap-3 max-w-md">
 <h1 class="text-white text-5xl font-black leading-tight tracking-tight">
-                        TEAM BUTUAN CITY
+                        BUTUAN PADDLERS
                     </h1>
 <p class="text-white/90 text-sm font-light leading-relaxed">
                         Teams competing in the Caraga Regional Athletic Games (CRAG) 2026 represent the diverse and vibrant communities of the Caraga region. 
                     </p>
 </div>
 <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
-                    Get Wallpapers
+                    Feedback Form
                 </button>
 </div>
 </div>
@@ -116,7 +117,7 @@ url("/Images/Images/2.JPG");'>
 
 
 
-<!-- End of Athletics -->
+<!-- Start of arnis -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
@@ -125,11 +126,16 @@ url("/Images/Images/2.JPG");'>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Arnis</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ELDRIDGE TROY D. GO</p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ERWIN D. HORA </p>
         </div>
 
 </div>
@@ -148,15 +154,20 @@ url("/Images/Images/2.JPG");'>
 <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: RODAMILO C. GETES </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: CHRISTINE L. FERNANDEZ </p>
         </div>
 
 </div>
 </div>
 </div>
 
-<!-- End of Athletics -->
+<!-- Badminton Boys -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
@@ -165,18 +176,23 @@ url("/Images/Images/2.JPG");'>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Badminton</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: JUDITH C. CABALTERA</p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: VAN RAEGHXJEL Y. MONOY</p>
         </div>
 
 </div>
 </div>
 </div>
 
-<!-- End of Athletics -->
+<!-- Basketball Boys -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
@@ -185,11 +201,16 @@ url("/Images/Images/2.JPG");'>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Basketball</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: JOHN PHILIP SAN JUAN </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Ass't Coach: RONALD GUTIERREZ </p>
         </div>
 
 </div>
@@ -197,12 +218,123 @@ url("/Images/Images/2.JPG");'>
 </div>
 
 
+<!-- Chess Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/4.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Chess</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: BRAIAN C. BOYORE </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: DORIS T. ECOBEN</p>
+        </div>
+
+</div>
+</div>
+</div>
 
 
+<!-- Dancesport -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/4.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Dancesport</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: PERTANIX IAN A. CARMELO </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: MARY JANE SALVO </p>
+        </div>
+
+</div>
+</div>
+</div>
+
+<!-- Football -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/4.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Football</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ROSANA V. CANOY </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Ass't Coach: MAE ANGELYN B. VICENTE </p>
+        </div>
+
+</div>
+</div>
+</div>
+
+<!-- Aero -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/4.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Aero</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: REGINE D. MILAN </p>
+        </div>
 
 
+</div>
+</div>
+</div>
+
+<!-- RG -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/4.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">RG</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: CHURCHEN D. SOTIS </p>
+        </div>
 
 
+</div>
+</div>
+</div>
 
 
 
@@ -262,8 +394,8 @@ url("/Images/Images/2.JPG");'>
 </a>
 
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Delegations.html">
-<span class="material-symbols-outlined text-[28px]">globe</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Delegation</p>
+<span class="material-symbols-outlined text-[28px]">storage</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Data</p>
 </a>
 
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="/Teams.html">
