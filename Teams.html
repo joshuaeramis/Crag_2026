@@ -7,11 +7,21 @@
 <link rel="stylesheet" href="/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+
+  <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
                         "primary": "#0047AB", // Deep Blue
                         "accent-gold": "#FFB800",
                         "accent-silver": "#94A3B8",
@@ -22,20 +32,21 @@
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
                 },
             },
         }
     </script>
 <style type="text/tailwindcss">
-        @layer utilities {
-            .no-scrollbar::-webkit-scrollbar { display: none; }
-            .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        }
-        body {
-            min-height: max(884px, 100dvh);
-            background-color: #F8FAFC;
-        }
+        body { font-family: 'Lexend', sans-serif; }
+        .venue-card:hover .venue-image { transform: scale(1.05); }
+        .venue-image { transition: transform 0.5s ease; }
     </style>
 <style>
     body {
@@ -45,36 +56,31 @@
 
   </head>
 <body class="bg-background-light font-display text-slate-900">
-
-
-<!-- body -->
-
-
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-
-    <!-- start of heading -->
 <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 ios-blur border-b border-slate-200 dark:border-slate-800">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-<div class="flex items-center justify-between h-16">
-<div class="flex items-center gap-8">
+<div class="flex items-center justify-center h-20">
+
+<div class="flex items-center gap-2">
+
+<!-- Logo -->
+ <div class="flex flex-col items-center gap-2 w-16">
+<div class="size-20 rounded-full">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/CRAG-LOGO.png);'></div>
+</div>
+
+</div>
+
+
+
+<!-- Title -->
 <div class="flex flex-col">
 <h1 class="text-[20px] font-bold text-primary tracking-widest uppercase leading-none">CRAG 2026</h1>
-<span class="text-lg font-bold">Caraga Regional Athletic Games </span>
-</div>
+<span class="text-lg font-bold">Caraga Regional Athletic Games</span>
 </div>
 
-
-<div class="flex items-center gap-4">
-<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-symbols-outlined">contrast</span>
-</button>
-<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500">
-<span class="material-symbols-outlined text-2xl">notifications</span>
-</button>
-<button class="md:hidden p-2 text-slate-500">
-<span class="material-symbols-outlined">menu</span>
-</button>
 </div>
+
 </div>
 </div>
 </nav>
@@ -87,19 +93,21 @@
 <!-- Hero Section -->
 <div class="p-4 @container">
 <div class="relative flex min-h-[320px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center overflow-hidden" data-alt="Action shot of collegiate rugby players competing on green field" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), 
-url("/Images/Images/2.JPG");'>
+url(/Images/Images/cover1.jpg);'>
 <div class="flex flex-col gap-3 max-w-md">
 <h1 class="text-white text-5xl font-black leading-tight tracking-tight">
-                        TEAM BUTUAN CITY
+                        BUTUAN PADDLERS
                     </h1>
 <p class="text-white/90 text-sm font-light leading-relaxed">
-                        Teams competing in the Caraga Regional Athletic Games (CRAG) 2026 represent the diverse and vibrant communities of the Caraga region. 
+                        CHAMPIONS IN THE MAKING, CARAGA YOUTH RISING
                     </p>
 </div>
-<button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
-                    Get Wallpapers
+<a href="/Feedback.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Feedback Form
                 </button>
-</div>
+</a>
+</div>  
 </div>
 
 
@@ -112,13 +120,22 @@ url("/Images/Images/2.JPG");'>
 
 
 <main class="flex-1 max-w-[1440px] mx-auto w-full px-8 py-10">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+    
 <div>
 <nav class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">
 </nav>
-<h2 class="text-4xl font-bold text-slate-900 tracking-tight">Official Teams</h2>
-<p class="text-slate-500 mt-2 text-lg">Playing Teams of Butuan City</p>
+<h2 class="text-4xl font-bold text-slate-900 tracking-tight">ELEMENTARY TEAMS</h2>
+<!-- <a href="/Teams.html">
+    <button class="flex h-10 items-center justify-center rounded-full bg-primary px-5 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-80">
+                    ELEMENTARY LEVEL
+                </button>
+</a> -->
 </div>
+
+
+
+
 
 
 
@@ -128,95 +145,862 @@ url("/Images/Images/2.JPG");'>
 
 
 
-<!-- End of Athletics -->
+<!-- Start of arnis Girls -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
-<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/1.JPG);'></div>
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T29.JPG);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Arnis Girls</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ELDRIDGE TROY D. GO</p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ERWIN D. HORA </p>
         </div>
 
 </div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
 </div>
 </div>
 
-<!-- End of Athletics -->
+<!-- Start of arnis Boys -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
-<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/2.JPG);'></div>
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T30.JPG);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Arnis Boys</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ELDRIDGE TROY D. GO</p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ERWIN D. HORA </p>
         </div>
 
 </div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
 </div>
 </div>
 
-<!-- End of Athletics -->
+<!-- End of Athletic Girls -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
-<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/3.JPG);'></div>
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T13.JPG);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletic Girls</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: RODAMILO C. GETES </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: CHRISTINE L. FERNANDEZ </p>
         </div>
 
 </div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
 </div>
 </div>
 
-<!-- End of Athletics -->
+<!-- End of Athletic Boy -->
  
 <div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
 <div class="relative h-56 w-full overflow-hidden">
-<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/4.JPG);'></div>
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T18.JPG);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletics</h3>
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Athletic Boy</h3>
 
         <div class="flex items-start gap-2 mt-2 text-slate-500">
-        <span class="material-symbols-outlined text-lg shrink-0 text-primary">sports</span>
-        <p class="text-sm font-medium leading-relaxed">Coach: JOSHUA M. ERAMIS</p>
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: RODAMILO C. GETES </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: CHRISTINE L. FERNANDEZ </p>
         </div>
 
 </div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Badminton Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk2-bEXoxI__Y9rse9tc4TcZQXc7grGoojO8DNAHOHtX6Os34Edu9Z04cxPCG3KSEIvzOKHLxw2vVKXPUcFDxNHzO4VkIxCcM-Rm7bnhUVPhUWYfiSN6FHNQEps50IqctmOwv1dYuFRvEaSHpkm7pKi1S0Us5daXeKmf9eliRZRsisgG8EOhoPV6L4jzZE9sHQmMg29KoVPnPgIWgORHArsMvroHmdC9r-Vk5NfHqNEPnKznJQ-Vqdnb85kMGrVuxKisqsM68Eg3k");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Badminton</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: JUDITH C. CABALTERA</p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: VAN RAEGHXJEL Y. MONOY</p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Badminton Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T16.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Badminton Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: JUDITH C. CABALTERA</p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: VAN RAEGHXJEL Y. MONOY</p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Basketball Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/1.Basketball.jpg);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Basketball</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: JOHN PHILIP SAN JUAN </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: RONALD GUTIERREZ </p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
 </div>
 </div>
 
 
+<!-- Chess Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T15.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Chess Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: BRAIAN C. BOYORE </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: DORIS T. ECOBEN</p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Chess Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T25.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Chess Boys</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: BRAIAN C. BOYORE </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: DORIS T. ECOBEN</p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Dancesport -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Dancesport</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: PERTANIX IAN A. CARMELO </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: MARY JANE SALVO </p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Football -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T11.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Football</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ROSANA V. CANOY </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: MAE ANGELYN B. VICENTE </p>
+        </div>
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Aero -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T23.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Aero</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: REGINE D. MILAN </p>
+        </div>
 
 
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- RG -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">RG</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: CHURCHEN D. SOTIS </p>
+        </div>
 
 
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- WAG -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">WAG</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: LYVIA S ARENAS </p>
+        </div>
 
 
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- MAG -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">MAG</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: MARY GRACE PAJARON  </p>
+        </div>
 
 
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- SEPAKTAKRAW -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">SEPAKTAKRAW</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: KATHYLYN C. GASCO  </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Softball -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Softball</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: GONZAGA, GENELYN, ABREU </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: BARROS, KEZIAH, TANGOB </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Swimming Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Swimming Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: JADE B. ABREU </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: SHERYL LOVE C. MONET </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Swimming Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Swimming Boys</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: MICHELLE G. ENCABO </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: JUDY M. ALCANTARA </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Table Tennis Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Table Tennis Boys</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: DAISY C. BALASABAS </p>
+        </div>
+
+        <!-- <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Ass't Coach: JUDY M. ALCANTARA </p>
+        </div> -->
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Table Tennis Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T14.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Table Tennis Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: DAPHNE KATE C. SUMATRA </p>
+        </div>
+
+        <!-- <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Ass't Coach: JUDY M. ALCANTARA </p>
+        </div> -->
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Taekwondo Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T19.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Taekwondo Boys</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: CARMELTIO LUSTRE </p>
+        </div>
+
+        <!-- <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Ass't Coach: JUDY M. ALCANTARA </p>
+        </div> -->
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Taekwondo Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T20.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Taekwondo Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: MIRAFLOR A. DEMAIN </p>
+        </div>
+
+        <!-- <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: JUDY M. ALCANTARA </p>
+        </div> -->
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Tennis Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Tennis Boys</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: SANDRA O. GREGORIO </p>
+        </div>
+
+        <!-- <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: JUDY M. ALCANTARA </p>
+        </div> -->
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+<!-- Tennis Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T17.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Tennis Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: BEVERLY A. KRUG </p>
+        </div>
+
+        <!-- <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: JUDY M. ALCANTARA </p>
+        </div> -->
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Volleyball Boys -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Volleyball Boys</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: BARBAJO, NOEL, ALIMPUOS </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: GILBUENA, MARRIE JOY, PARILLA </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Volleyball Girls -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/T12.JPG);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Volleyball Girls</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ATIENZA, SHELLA MAE SAMSON </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">female</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: PASCUAL, JEANILYN CAETONA </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- Futsal -->
+ 
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="venue-image absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Images/crag-logo.png);'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">Futsal</h3>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Coach: ABNER J. MAUR </p>
+        </div>
+
+        <div class="flex items-start gap-2 mt-2 text-slate-500">
+        <span class="material-symbols-outlined text-lg shrink-0 text-primary">male</span>
+        <p class="text-sm font-medium leading-relaxed">Asst. Coach: JOYCE A. DAMALERIO </p>
+        </div>
+
+
+</div>
+<a href="/Map.html">
+    <button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                    Certificates
+                </button>
+</a>
+</div>
+</div>
+
+
+<!-- -------------------------------------------------------end of ELEMENTARY ______________________ -->
+
+<div>
+<nav class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">
+</nav>
+<h2 class="text-4xl font-bold text-slate-900 tracking-tight">SECONDARY TEAMS</h2>
+<a href="/Teams-2.html">
+    <button class="flex h-10 items-center justify-center rounded-full bg-primary px-5 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-transform active:scale-80">
+                    Click Here
+                </button>
+</a>
+
+</div>
 
 
 
@@ -231,6 +1015,8 @@ url("/Images/Images/2.JPG");'>
 </body>
 
 
+
+<!-- Start of Secondary  -->
 
 
 
@@ -263,9 +1049,9 @@ url("/Images/Images/2.JPG");'>
 </a>
 
 
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors"href="/Results.html">
-<span class="material-symbols-outlined text-[28px]">Military_tech</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Result</p>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors"href="/Matches.html">
+<span class="material-symbols-outlined text-[28px]">swords</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Matches</p>
 </a>
 
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Venue.html">
@@ -273,10 +1059,16 @@ url("/Images/Images/2.JPG");'>
 <p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Venue</p>
 </a>
 
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Delegations.html">
-<span class="material-symbols-outlined text-[28px]">globe</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Delegation</p>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Data.html">
+<span class="material-symbols-outlined text-[28px]">storage</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Data</p>
 </a>
+
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Events.html">
+<span class="material-symbols-outlined text-[28px]">sprint</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Events</p>
+</a>
+
 
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="/Teams.html">
 <span class="material-symbols-outlined text-[28px]">groups</span>

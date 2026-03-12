@@ -9,9 +9,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
                         "primary": "#0047AB", // Deep Blue
                         "accent-gold": "#FFB800",
                         "accent-silver": "#94A3B8",
@@ -22,20 +26,21 @@
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
                 },
             },
         }
     </script>
 <style type="text/tailwindcss">
-        @layer utilities {
-            .no-scrollbar::-webkit-scrollbar { display: none; }
-            .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        }
-        body {
-            min-height: max(884px, 100dvh);
-            background-color: #F8FAFC;
-        }
+        body { font-family: 'Lexend', sans-serif; }
+        .venue-card:hover .venue-image { transform: scale(1.05); }
+        .venue-image { transition: transform 0.5s ease; }
     </style>
 <style>
     body {
@@ -45,110 +50,153 @@
 
   </head>
 <body class="bg-background-light font-display text-slate-900">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
-<div class="flex items-center bg-surface p-4 pb-3 justify-between sticky top-0 z-50 border-b border-slate-200 shadow-sm">
-<div class="text-slate-900 flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-slate-100 rounded-full transition-colors">
-<span class="material-symbols-outlined font-bold">menu</span>
-</div>
-<div class="flex flex-col items-center">
-<h1 class="text-slate-900 text-5xl font-extrabold leading-tight tracking-tight">CRAG 2026</h1>
-<p class="text-[20px] uppercase tracking-[0.15em] text-primary font-black">Caraga Regional Athletic Games </p>
-</div>
-<div class="flex w-10 items-center justify-end">
-<button class="relative flex size-10 items-center justify-center rounded-full bg-slate-100 text-slate-900 border border-slate-200">
-<span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2.5 right-2.5 flex h-2 w-2 rounded-full bg-red-600 ring-2 ring-white"></span>
-</button>
-</div>
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 ios-blur border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+<div class="flex items-center justify-center h-20">
+
+<div class="flex items-center gap-2">
+
+<!-- Logo -->
+ <div class="flex flex-col items-center gap-2 w-16">
+<div class="size-20 rounded-full">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/CRAG-LOGO.png);'></div>
 </div>
 
-<!-- 
+</div>
+
+
+
+<!-- Title -->
+<div class="flex flex-col">
+<h1 class="text-[20px] font-bold text-primary tracking-widest uppercase leading-none">CRAG 2026</h1>
+<span class="text-lg font-bold">Caraga Regional Athletic Games</span>
+</div>
+
+</div>
+
+</div>
+</div>
+</nav>
+
+
+<!-- Start of Myday -->
 
 <div class="flex w-full overflow-hidden px-4 py-6 no-scrollbar overflow-x-auto">
-<div class="flex min-h-min flex-row items-start justify-start gap-5">
+<div class="flex min-h-min flex-row items-start justify-center gap-5">
 <div class="flex flex-col items-center gap-2 w-16">
 <div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDTi-eWx7WEv8y7BuLVGBE1XCZqD_ZgVh6hMrLJE_IgnBtDiaXNsUTLfLl2mf3KL9fBG2ABtNFjJfseqWTMY1-pdhzqkcmhhDlnix3GwGMhDYdyWU1e1oMXLmfDoiEwaRCMz7QomXSqvyacEaDSQcPTndg_YAtJzwSBsAhRMPLTqniy71anvLtE5aw1Qrfqa_srKEp2qQdDbat7Pzy7OkBypHvszlzAWg5guvh9r1xsk-PAInMNL1FLwFkyfJh8TlEYlKxC8873fc");'></div>
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/1.AgusanDelNorte.jpg);'></div>
 </div>
-<p class="text-[11px] font-bold text-slate-800 text-center">Butuan City</p>
-</div>
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJ2IRBp-MfzLdt4llDfikU2suHFGsvDc-9MkJ-69Ov0t7JG_DF6zn9CerNZCBW51N0zm8YZq_WZKLcZk9v46vQBF190bGkAn36koVOlBkiEftnDPYF3OSyYY3a0AZ1wLsvkCpSpojjChIvpLUags1OiB3oFgABYXlz9c9AF5ugWUVrEQRkx97sD0PWyBKwS55CShzJafqphzEQ7_zqeojXntTGJLoJ_Mfv8nJT-2O_38Of6aWqvIM_2f1FH_bJ9nqCCWDKeFQ1C5E");'></div>
-</div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Agusan Del Norte</p>
-</div>
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsnFG5FGGcx2CH-FwIcYunRSKTQmFTl4_F0MR5qyknVDRX54eVrDi4tkcJPk9Wi2UClwhNDM--1FjfUOrN4rlqyLOACoM1VYo6Cadx3hqiWbpl1NX5cdckGK8486wve1DARmZEvwTJsF190hj0YEshHP1Mh2IZA-GnlyVJgHVflADgnfmaetFCuuz85Y17dozR8Ndv8ZvMKlHbY3sNhbpqNzw95TvaDESmSGUXyKSE_JOCxJCyu3DuLbDykUfwdLkf3hJlQrBlg7E");'></div>
-</div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Agusan Del Sur</p>
+<p class="text-[11px] font-bold text-slate-800 text-center">Agusan Del Norte</p>
 </div>
 
 <div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbu7ohtRcxBdRO2tVUYU28cNe7_PBoY8cTfmY209OD_5CvXL_f7WmzwCapn_ZrcZ-qRRM6So3gkcGNh5wJyTvBYTJAKkaeqsNwPCPLf4y64xjc82hivzSf3Jq3lk-wKs9HNoQXRfdzM3OqZBmy8ujQIOkq4OqVIcViU1IFuBJgQcCECdkmMw4rs6lRrGRt42SDp8-L_jGF3dzBh3sb-SKAcgIBvb37ycQSIGRx0swMHPM_Hi7yBIpPZlgrWr37S44q4CHTkmQQqwc");'></div>
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/2.AgusanDelSur.jpg);'></div>
 </div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Bislig</p>
-</div>
-
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
-</div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
+<p class="text-[11px] font-bold text-slate-800 text-center">Agusan Del Sur</p>
 </div>
 
 <div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/3.bayugan.jpg);'></div>
 </div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
-</div>
-
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
-</div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
+<p class="text-[11px] font-bold text-slate-800 text-center">Bayugan</p>
 </div>
 
 <div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/4.bislig.jpg);'></div>
 </div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
-</div>
-
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
-</div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
+<p class="text-[11px] font-bold text-slate-800 text-center">Bislig</p>
 </div>
 
 <div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/5.Butuan.jpg);'></div>
 </div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
+<p class="text-[11px] font-bold text-slate-800 text-center">Butuan</p>
 </div>
 
 <div class="flex flex-col items-center gap-2 w-16">
-<div class="size-16 rounded-full p-[2px] bg-slate-200">
-<div class="size-full rounded-full border-2 border-white bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-2wXzCaPttd3CGvbS1QaLWUY915Vc9ZFjmcmr4gfeh34F50H5a9jfnYPD6idOgjB-jW_ijY4Jwe2XqvPlPiHK_R5WANnBJqGS5a939sVF9N0pm4CJ6uVSrHB_oz6AG3xGgw8ZwYkyC1f3iRyKcL8qaSAOGsu862Nb9dqtRlu1VUUqs4jIc2Z4Ny4ionq9itdumlnCtBMqWTC1e5SjWkK5xcM9Ql8C7wOP92a-jecq1oy81xKk_O2I38IfXlNUoe3yeShBqCNclSo");'></div>
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/6.Cabadbaran.png);'></div>
 </div>
-<p class="text-[11px] font-semibold text-slate-600 text-center">Surigao City</p>
+<p class="text-[11px] font-bold text-slate-800 text-center">Cabadbaran</p>
+</div>
+
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/7.Dinagat.jpg);'></div>
+</div>
+<p class="text-[11px] font-bold text-slate-800 text-center">Dinagat</p>
+</div>
+
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/8.Siargao.png);'></div>
+</div>
+<p class="text-[11px] font-bold text-slate-800 text-center">Siargao</p>
+</div>
+
+
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/9.SurigaoCity.png);'></div>
+</div>
+<p class="text-[11px] font-bold text-slate-800 text-center">Surigao City</p>
+</div>
+
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/10.SurigaoDelNorte.png);'></div>
+</div>
+<p class="text-[11px] font-bold text-slate-800 text-center">Surigao Del Norte</p>
+</div>
+
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/11.SurigaoDelSur.png);'></div>
+</div>
+<p class="text-[11px] font-bold text-slate-800 text-center">Surigao Del Sur</p>
+</div>
+
+
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="size-16 rounded-full p-[3px] bg-gradient-to-tr from-accent-gold via-red-500 to-primary shadow-md">
+<div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
+style='background-image: url(/Images/Images/12.Tandag.png);'></div>
+</div>
+<p class="text-[11px] font-bold text-slate-800 text-center">Tandag</p>
+</div>
+
 </div>
 </div>
-</div>
-<div class="px-4 py-2"> -->
+
+
+
+<!-- End of Myday -->
+
+
+<div class="px-4 py-2">
 
 <button class="group relative w-full flex items-center justify-between overflow-hidden rounded-2xl h-24 px-6 bg-primary text-white shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
 
 <div class="flex flex-col items-start z-10">
-<span class="text-[10px] font-black uppercase tracking-[0.2em] text-white/90 mb-1">Looker Studio • Real-time</span>
-<span class="text-xl font-extrabold">View Live Scoring</span>
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-white/90 mb-1">Looker Studio • March 11, 2026 2:00 PM</span>
+<span class="text-xl font-extrabold">PARTIAL AND UNOFFICIAL RESULTS</span>
 </div>
 
 <div class="flex items-center gap-3 z-10">
@@ -160,6 +208,10 @@
 </button>
 
 <iframe width="100%" height="1000vh" src="https://lookerstudio.google.com/embed/reporting/a63c3d47-48f9-4603-81ed-6c2387ccc354/page/dxYoF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+
+
+<!-- End of Highlights -->
+
 
 
 <!-- Highlights -->
@@ -179,56 +231,56 @@
 <div class="flex w-full overflow-x-auto no-scrollbar gap-4 px-4">
 
 <div class="min-w-[280px] relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("Images/Images/1.JPG");'></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/H-1.jpg);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5">
-<span class="inline-block px-3 py-1 rounded-full bg-accent-gold text-slate-900 text-[10px] font-black mb-3 uppercase tracking-wider">BUTUAN CITY</span>
-<h3 class="text-white text-lg font-bold leading-tight">Butuan City clinches Gold in 100m Dash</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-accent-gold text-slate-900 text-[10px] font-black mb-3 uppercase tracking-wider">Butuan City</span>
+<h3 class="text-white text-lg font-bold leading-tight">Butuan City athletes showcase talent at regionals.</h3>
 </div>
 </div>
 
 <div class="min-w-[280px] relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("Images/Images/2.JPG");'></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/H-2.jpg);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5">
-<span class="inline-block px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-black mb-3 uppercase tracking-wider">Surigao del Sur</span>
-<h3 class="text-white text-lg font-bold leading-tight">Surigao del Sur dominates Volleyball prelims</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-black mb-3 uppercase tracking-wider">Butuan City</span>
+<h3 class="text-white text-lg font-bold leading-tight">Pride and excellence from Butuan City delegates.</h3>
 </div>
 </div>
 
 <div class="min-w-[280px] relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("Images/Images/3.JPG");'></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/H-3.jpg);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5">
 <span class="inline-block px-3 py-1 rounded-full bg-red-600 text-white text-[10px] font-black mb-3 uppercase tracking-wider">Butuan City</span>
-<h3 class="text-white text-lg font-bold leading-tight">City Sharks lead in Tennis Quarterfinals</h3>
+<h3 class="text-white text-lg font-bold leading-tight">Butuan City united for regional athletic victory.</h3>
 </div>
 </div>
 
 <div class="min-w-[280px] relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("Images/Images/4.JPG");'></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/H-4.jpg);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5">
 <span class="inline-block px-3 py-1 rounded-full bg-red-600 text-white text-[10px] font-black mb-3 uppercase tracking-wider">Butuan City</span>
-<h3 class="text-white text-lg font-bold leading-tight">City Sharks lead in Tennis Quarterfinals</h3>
+<h3 class="text-white text-lg font-bold leading-tight">Champions rise from determined Butuan City athletes.</h3>
 </div>
 </div>
 
 <div class="min-w-[280px] relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("Images/Images/5.JPG");'></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/H-5.jpg);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5">
 <span class="inline-block px-3 py-1 rounded-full bg-red-600 text-white text-[10px] font-black mb-3 uppercase tracking-wider">Butuan City</span>
-<h3 class="text-white text-lg font-bold leading-tight">City Sharks lead in Tennis Quarterfinals</h3>
+<h3 class="text-white text-lg font-bold leading-tight">Butuan City represents strength, discipline, and pride.</h3>
 </div>
 </div>
 
 <div class="min-w-[280px] relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("Images/Images/6.JPG");'></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url(/Images/Matches/H-6.jpg);'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5">
 <span class="inline-block px-3 py-1 rounded-full bg-red-600 text-white text-[10px] font-black mb-3 uppercase tracking-wider">Butuan City</span>
-<h3 class="text-white text-lg font-bold leading-tight">City Sharks lead in Tennis Quarterfinals</h3>
+<h3 class="text-white text-lg font-bold leading-tight">Victory driven by hardworking Butuan City participants.</h3>
 </div>
 </div>
 
@@ -239,7 +291,7 @@
 <!-- End of Highlights -->
 
 <div class="mt-10 px-4 pb-12">
-<h2 class="text-slate-900 text-xl font-black tracking-tight mb-5">Upcoming Finals</h2>
+<h2 class="text-slate-900 text-xl font-black tracking-tight mb-5">Latest Sports News</h2>
 <div class="space-y-4">
 <div class="flex items-center gap-4 bg-surface p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div class="flex flex-col items-center justify-center bg-primary text-white w-14 h-14 rounded-xl shrink-0 shadow-sm">
@@ -247,7 +299,7 @@
 <span class="text-xl font-black leading-none">24</span>
 </div>
 <div class="flex-1 min-w-0">
-<h4 class="font-bold text-slate-900 truncate">Men's Basketball Finals</h4>
+<h4 class="font-bold text-slate-900 truncate">Basketball Game   </h4>
 <p class="text-xs font-medium text-slate-500 flex items-center gap-1 mt-1">
 <span class="material-symbols-outlined text-xs">location_on</span>
                         Regional Sports Complex • 3:00 PM
@@ -276,23 +328,267 @@
 </div>
 </div>
 
+
+
+
+
+<!-- sTART OF TEAMS -->
+
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+
+
+
+
+<main class="flex-1 max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
+
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+
+<div>
+<nav class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-3"></nav>
+
+<h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+BILLETING QUARTERS
+</h2>
+
+
+</div>
+
+</div>
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- Card 1 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v1.jpg" class="w-full h-full object-contain" alt="Futsal">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Agusan Del Norte Delegation
+</h3>
+</div>
+
+</div>
+
+
+<!-- Card 2 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v2.jpg" class="w-full h-full object-contain" alt="Basketball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Agusan Del Sur Delegation
+</h3>
+</div>
+
+</div>
+
+
+<!-- Card 3 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v3.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Bayugan Delegation
+</h3>
+</div>
+
+</div>
+
+
+<!-- Card 4 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v5.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Butuan City Delegation
+</h3>
+</div>
+
+</div>
+
+
+<!-- Card 5 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v6.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Cabadbaran Delegation
+</h3>
+</div>
+
+</div>
+
+<!-- Card 6 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v7.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Dinagat Delegation
+</h3>
+</div>
+
+</div>
+
+<!-- Card 7 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v8.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Siargao Delegation
+</h3>
+</div>
+
+</div>
+
+<!-- Card 8 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v9.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Surigao City Delegation
+</h3>
+</div>
+
+</div>
+
+<!-- Card 9 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v10.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Surigao Del Norte Delegation
+</h3>
+</div>
+
+</div>
+
+<!-- Card 10 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v11.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Surigao Del Sur Delegation
+</h3>
+</div>
+
+</div>
+
+<!-- Card 11 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v12.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Tandag Delegation
+</h3>
+</div>
+
+</div>  
+
+<!-- Card 12 -->
+<div class="venue-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition-all duration-300 flex flex-col">
+
+<div class="relative w-full aspect-video flex items-center justify-center bg-black">
+<img src="/Images/Images/v13.jpg" class="w-full h-full object-contain" alt="Volleyball">
+</div>
+
+<div class="p-6">
+<h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+Technical Officials
+</h3>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+</main>
+
+
+
+
+
+
+
+
+
 <div class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pb-8 pt-3 shadow-[0_-4px_12px_rgba(0,0,0,0.03)]">
+
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="/index.html">
 <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1">home</span>
 <p class="text-[10px] font-black leading-normal uppercase tracking-wider">Home</p>
 </a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Results.html">
-<span class="material-symbols-outlined text-[28px]">military_tech</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Results</p>
+
+
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors"href="/Matches.html">
+<span class="material-symbols-outlined text-[28px]">swords</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Matches</p>
 </a>
+
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Venue.html">
 <span class="material-symbols-outlined text-[28px]">explore</span>
 <p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Venue</p>
 </a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Delegations.html">
-<span class="material-symbols-outlined text-[28px]">globe</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Delegation</p>
+
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Data.html">
+<span class="material-symbols-outlined text-[28px]">storage</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Data</p>
 </a>
+
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Events.html">
+<span class="material-symbols-outlined text-[28px]">sprint</span>
+<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Events</p>
+</a>
+
+
 <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Teams.html">
 <span class="material-symbols-outlined text-[28px]">groups</span>
 <p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Teams</p>
@@ -301,7 +597,7 @@
 
 </div>
 
-<footer class="bg-white border-t border-slate-200 mt-20 py-12">
+<footer class="border-slate-200 mt-20 py-12">
 
 </footer>
 
