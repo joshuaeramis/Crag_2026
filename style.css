@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  animation: scroll 20s linear infinite;
+  animation: scroll 8s linear infinite;
 }
 
 @keyframes scroll {
@@ -10,7 +10,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-30%);
   }
 }
 
