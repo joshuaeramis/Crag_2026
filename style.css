@@ -1,16 +1,32 @@
-.carousel-track {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  animation: scroll 8s linear infinite;
+.carousel-container{
+  width:100%;
+  overflow:hidden;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-30%);
-  }
+.carousel-track{
+  display:flex;
+  align-items:flex-start;  /* important */
+  width:max-content;
+  animation:scroll 25s linear infinite;
 }
 
+.carousel-track{
+  display:flex;
+  align-items:flex-start; /* keeps all items aligned */
+}
+
+.card{
+  flex:0 0 auto;
+  margin:0 10px;
+  display:flex;
+  align-items:flex-start; /* important */
+}
+
+@keyframes scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
