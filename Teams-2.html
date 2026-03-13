@@ -54,36 +54,84 @@
     }
   </style>
 
-  </head>
+</head>
 <body class="bg-background-light font-display text-slate-900">
 <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 ios-blur border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-<div class="flex items-center justify-center h-20">
 
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="flex items-center justify-between h-20">
+
+<!-- LEFT SIDE -->
 <div class="flex items-center gap-2">
 
 <!-- Logo -->
- <div class="flex flex-col items-center gap-2 w-16">
+<div class="flex flex-col items-center gap-2 w-16">
 <div class="size-20 rounded-full">
 <div class="size-full rounded-full border-2 border-white bg-center bg-cover" 
 style='background-image: url(/Images/Images/CRAG-LOGO.png);'></div>
 </div>
-
 </div>
-
-
 
 <!-- Title -->
 <div class="flex flex-col">
-<h1 class="text-[20px] font-bold text-primary tracking-widest uppercase leading-none">CRAG 2026</h1>
-<span class="text-lg font-bold">Caraga Regional Athletic Games</span>
+<h1 class="text-[20px] font-bold text-primary tracking-widest uppercase leading-none">
+CRAG 2026
+</h1>
+<span class="text-lg font-bold">
+Caraga Regional Athletic Games
+</span>
 </div>
 
 </div>
 
+
+<!-- DESKTOP MENU -->
+<div class="hidden md:flex items-center gap-6 font-semibold">
+<a href="/index.html" class="hover:text-blue-600">Home</a>
+<a href="/matches.html" class="hover:text-blue-600">Matches</a>
+<a href="/Data.html" class="hover:text-blue-600">Data</a>
+<a href="/events.html" class="hover:text-blue-600">Events</a>
+<a href="/teams.html" class="hover:text-blue-600">Teams</a>
+</div>
+
+
+<!-- HAMBURGER BUTTON -->
+<button id="menu-btn" class="md:hidden flex flex-col gap-1">
+<span class="w-6 h-0.5 bg-black dark:bg-white"></span>
+<span class="w-6 h-0.5 bg-black dark:bg-white"></span>
+<span class="w-6 h-0.5 bg-black dark:bg-white"></span>
+</button>
+
 </div>
 </div>
+
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+
+<div class="flex flex-col gap-4 font-semibold">
+
+<a href="/index.html" class="hover:text-blue-600">Home</a>
+<a href="/matches.html" class="hover:text-blue-600">Matches</a>
+<a href="/Data.html" class="hover:text-blue-600">Data</a>
+<a href="/events.html" class="hover:text-blue-600">Events</a>
+<a href="/teams.html" class="hover:text-blue-600">Teams</a>
+
+</div>
+
+</div>
+
 </nav>
+
+<script>
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+menu.classList.toggle("hidden");
+});
+</script>
 
             <!-- End of Heading -->
 
@@ -1673,40 +1721,7 @@ url(/Images/Images/cover1.jpg);'>
 
 
 
-<div class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pb-8 pt-3 shadow-[0_-4px_12px_rgba(0,0,0,0.03)]">
 
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/index.html">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1">home</span>
-<p class="text-[10px] font-black leading-normal uppercase tracking-wider">Home</p>
-</a>
-
-
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors"href="/.html">
-<span class="material-symbols-outlined text-[28px]">swords</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Matches</p>
-</a>
-
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Venue.html">
-<span class="material-symbols-outlined text-[28px]">explore</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Venue</p>
-</a>
-
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Data.html">
-<span class="material-symbols-outlined text-[28px]">storage</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Data</p>
-</a>
-
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-600 transition-colors" href="/Events.html">
-<span class="material-symbols-outlined text-[28px]">sprint</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Events</p>
-</a>
-
-
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="/Teams.html">
-<span class="material-symbols-outlined text-[28px]">groups</span>
-<p class="text-[10px] font-bold leading-normal uppercase tracking-wider">Teams</p>
-</a>
-</div>
 
 </div>
 
